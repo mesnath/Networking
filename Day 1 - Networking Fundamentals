@@ -147,8 +147,15 @@ RDP
 DNS
   TCP/UDP 53
   Domain Name Protocol
-  UDP for standard shit, TCP for one transfers
-
+  UDP for standard shit, TCP for zone transfers
+DHCP
+    UDP 67/68
+    Dynamic Host Configuration protocol
+    how you're dynamically assigned an IP address
+    DORA - Discover, Offer, Request, Acknowlege
+    SARR - Solicit, Advertise, Request, Reply
+RADIUS
+    UDP 1645/1646 AND 1812/1813
 
 
 

@@ -1,0 +1,176 @@
+iBit - 0 or 1
+nibble - 1111
+byte - 111111111
+half word - 1111111111111111
+Word - 11111111111111111111111111111111
+***********************************************************************************************************************************
+***********************************************************************************************************************************
+
+physical
+    medium of actual transportation
+    data unit - bits
+data link
+    vlans, protocols such as arp
+    data unit - frames
+network
+    routers
+    icmp/ip/ipsec
+    data unit - packets
+transport
+    tcp/udp
+    three way handshake
+    data unit - segments
+session
+    any protocol for maintaining a session
+    data unit - data
+presentation  
+    makes data readable/presentable to the application
+    compression/encoding/encryption
+    data unit - data
+application
+    the part that the user directly interacts with
+    data unit - data
+***********************************************************************************************************************************
+***********************************************************************************************************************************
+IEEE 
+  standards
+IANA
+  assigning ports, ip numbers, MAC unique identifiers
+IETF
+  RFC 791, IP
+***********************************************************************************************************************************
+***********************************************************************************************************************************
++++++++++++++DATA LINK SUB-LAYERS+++++++++++++++++++
+MAC (Media Access Control)
+  controls access to the physical layer
+LLC (Logical Link Control)
+  controls access to the network layer?
+***********************************************************************************************************************************
+***********************************************************************************************************************************
+++++++++++++++++Ethernet header++++++++++++++++++++
+Preamble
+  7 bytes of alternating 1's and 0's
+SFD
+  1 byte delimiter
+Ethernet Frame
+    Destination MAC, Source MAC, VLAN Tag (optional), Ethertype
+        Mac Header/Trailer - 14 bytes
+    Payload/Data/SDU
+        Data - 46-1500 bytes
+    CRC/FCS
+        4 bytes
+++++++++++++++++++++ARP HEADER+++++++++++++++++++++
+byte/bit offset
+hardware type - byte offset 0
+protocol type - byte offset 2
+sender protocol address - byte offset 14
+sends request out to see who's where
+***********************************************************************************************************************************
+***********************************************************************************************************************************
+Network Layer
++++++++++++++++++++IPV4 header++++++++++++++++++++
+not much new info
+Options (if IHL is greater than 5)
+    IHL contains number of words
+20-60 bytes
+
+++++++++++++++++++Fragmentation+++++++++++++++++++
+paket is fragmented if it has offset or RDM
+1500(mtu)-20(ipheaderlength)=1489/8(length of byte)=185(offset)
+***********************************************************************************************************************************
+***********************************************************************************************************************************
+++++++++++++++++++++Session Layer+++++++++++++++++++++++
+
+socks 4/5
+  tcp 1080
+pptp
+  tcp 1723L2TP
+  dogshit
+  tcp 1701
+  can use external encrypting
+smb/cifs 
+  tcp 139/445 and udp 137,138
+  smb rides of netbios
+  samba abd cifs are just flavors of smb
+rpc
+  any port
+  request/response protocol
+  sends a request for information to an external server; recieves the information from the external server; display collected data to user
+***********************************************************************************************************************************
+***********************************************************************************************************************************
++++++++++++++++++++++Presentation Layer++++++++++++++++++
+translation
+encoding
+encryption
+***********************************************************************************************************************************
+***********************************************************************************************************************************
++++++++++++++++++++++Application Layer++++++++++++++++++
+FTP
+  TCP 20/21 (command and control/data)
+  messages
+    ftp commands
+    ftp reply codes
+  modes
+    active (defult)
+      server initiates connection on data port (20)
+    passive
+      client initiates connection on data port (21)
+  not encrypted/is plaintext
+SSH
+  tcp 22
+  secure shell
+  tunneling
+  file transfer (scp, sftp)
+Telnet
+  tcp 21
+  remote shell
+  plaintext
+SMTP
+  TCP 25
+  send mail to people
+TACACS 
+  tcp 49
+  switch ask for permission
+HTTP(S)
+  TCP 80/443
+  methods
+    get, head, post, put
+POP
+  TCP 110
+  old mail
+IMAP
+  TCP 143
+  replacement for pop
+RDP
+  TCP 3389
+  remote desktop procedure
+DNS
+  TCP/UDP 53
+  Domain Name Protocol
+  UDP for standard shit, TCP for one transfers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

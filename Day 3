@@ -1,0 +1,29 @@
+Socket types:
+  Stream : 
+    connection orieneted and sequences; methods for connection establishment and tear-down, used with tcp,sctp,and bluetooth (protocol not needed)
+  Datagram:
+    connectionless; designed for quickly sending and receiving data, used with upp (Protocol not needed)
+  Raw:
+    Direct sending and receiving of ip packets without automatic protocol-specific formatting
+
+User Space:
+    What the uses uses and the ahrdware is suppsoed to do; 
+    Stream and datagram sockets, most common, dont require elevated priv.
+    netcatto connect to or create a listener, use tcpdump or wireshark to read a file,. nmap without switched, /dev/tcp  or /dev/udp to transmit data
+    
+
+Kernel Space : 
+  Background processes and where you  can change waht the hardware is doing; raw sockets
+  using tcpdump/wiresahrk to capture packets on the wire
+  Using nmap for OS identification ro to set specific flags when scanning
+  Using netcat to create a listener in the well known port range
+
+https://docs.python.org/3/library/socket.html
+
+Import Socket: 
+  s = socket.socket(socket.FAMILY, socket.TYPE, socket.PROTOCOL)
+    FAMILY Constants = AF_INET, AF_INET6,AF_UNIX
+    TYPE Constants = SOCK_STREAM,SOCK_DGRAM,SOCK_RAW
+    PROTO Constants = 0,IPPROTO_RAW
+
+if you are going to create a tunnel and need to connect a socket through, change the ipaddr to the loopback and the port will be high number port on the tunnel.

@@ -47,3 +47,26 @@ network scanning
 
   find open ports with nmap then use netcat to verify
       echo " ' | nc <ip> <port number>
+
+
+
+
+host discover
+  nmap, nc, scan scrpt, ping sweep
+port discovery
+  nmap, nc
+port validation
+  banner grabbing using nc
+follow on actions based on ports found
+  if 22 or 23 CONNECT and PASSIVE RECON
+  IF 21 or 80 wget -r IP_ADDRESS **OR** wget -r ftp://IP_ADDRESS **OR** firefox
+      eom or eog to open them
+
+scan methodology
+quick scan 21-23, 80
+specific ports based on hints/clues
+well knows
+chinks of 2000 or first 10000
+hail mary, (65535)
+
+

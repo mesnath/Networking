@@ -6,7 +6,7 @@
       lower risk of discovery
       not as straight forward and requieres more time than active
       trying to find IP addresses and subdomains, external and 3rd party sites, people and technologies, content of interest, vulnerabilities
-      whois queries, job site listints, phone numbers, google searches, passive OS fingerprinting
+      whois queries, job site listings, phone numbers, google searches, passive OS fingerprinting
   internal
       sitting inside trying to find more shit inside the network
       packet sniffers ie. tcpdump, wireshark (internal passive)
@@ -14,4 +14,30 @@
   external
       generally the start, from outside the target system
       OSINT (external passive)
+          resolving hostnames to ip addresses, rfc 3912, WHOIS queries  
+            DIG:
+              typically between primary and secondary dns servers
+              if allowed to transfer externally hostnames, IPs and IP blocks can be determined
+
       network scanning (internal passive)
+
+network scanning
+ #linux   for i in {1..254} ;do (ping -c 1 192.168.1.$i | grep "bytes from" &) ;done
+ #Windows for /L %i in (1,1,255) do @ping -n 1 -w 200 192.168.1.%i > nul && echo 192.168.1.%i is up.
+     ^^^^ ping sweep ^^^^
+  remote to local
+    pen testing
+  local to remote
+    illegal
+  local to local
+    network admins
+  remote to remote
+    checking a lotta shit at once
+    don't worry about it
+  aim:
+    wide range target scan
+    target specific scan
+  method:
+    how you're scanning
+    single source scan
+    distributed scan

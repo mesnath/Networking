@@ -24,7 +24,8 @@
 network scanning
  #linux   for i in {1..254} ;do (ping -c 1 192.168.1.$i | grep "bytes from" &) ;done
  #Windows for /L %i in (1,1,255) do @ping -n 1 -w 200 192.168.1.%i > nul && echo 192.168.1.%i is up.
-     ^^^^ ping sweep ^^^^
+     ^^^^ ruby ping sweep ^^^^
+  21-23,80
   remote to local
     pen testing
   local to remote
@@ -41,3 +42,8 @@ network scanning
     how you're scanning
     single source scan
     distributed scan
+
+  idle scan uses zombie IP, uses another person's IP (that ou have to specify  to do the scan
+
+  find open ports with nmap then use netcat to verify
+      echo " ' | nc <ip> <port number>

@@ -62,6 +62,7 @@ follow on actions based on ports found
   IF 21 or 80 wget -r IP_ADDRESS **OR** wget -r ftp://IP_ADDRESS **OR** firefox
       eom or eog to open them
 
+
 scan methodology
 quick scan 21-23, 80
 specific ports based on hints/clues

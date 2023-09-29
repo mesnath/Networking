@@ -1,1 +1,17 @@
-
+4 types of recon
+  active
+      
+  passive
+      gathering info without direct interaction
+      lower risk of discovery
+      not as straight forward and requieres more time than active
+      trying to find IP addresses and subdomains, external and 3rd party sites, people and technologies, content of interest, vulnerabilities
+      whois queries, job site listints, phone numbers, google searches, passive OS fingerprinting
+  internal
+      sitting inside trying to find more shit inside the network
+      packet sniffers ie. tcpdump, wireshark (internal passive)
+      dns queries, arp reqests (internal active)
+  external
+      generally the start, from outside the target system
+      OSINT (external passive)
+      network scanning (internal passive)

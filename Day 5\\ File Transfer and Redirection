@@ -38,4 +38,6 @@ SCP
   spc -p 111 student@localhost:secretshit.txt /home/student
   spc -p 111 secretshit.txt student@localhost:home/student
 
-  
+  netcat
+swiss army knife 
+refer to slides of fg, there's a lotta shit

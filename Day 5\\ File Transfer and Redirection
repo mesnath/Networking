@@ -41,3 +41,8 @@ SCP
   netcat
 swiss army knife 
 refer to slides of fg, there's a lotta shit
+
+mknod mypipe p
+nc -l -p 1235 > file
+*switch to your ssh*
+nc -lp 1234 0< mypipe | nc 172.16.82.115 1234 1> mypipe ORRRRRRRRR nc 172.16.82.115 6789 0< mypipe | nc 10.50.47.103 1235 1> mypipe

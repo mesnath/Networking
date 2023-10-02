@@ -1,0 +1,32 @@
+TFTP
+  UDP 69
+  extremely small and very simple communication
+  no terminal connection ()
+  insecure (no authentication or encryption
+  no directory services
+  used often for things such as BOOTP and PXE
+FTP
+  tcp 20 and 21
+  uses multiple tcp connection
+  authentication through clear-text sign in (username and password)
+  insecure in default configuration
+  has directory services
+  can be enhanced with ssl/TLS (FTPS)
+  anonymous login
+SFTP
+  tcp 22
+  uses symmetric and asymmetric encryption
+  adds ftp like services to ssh
+  authentication through sign in (username and password) o with ssh key
+FTPS
+  tcp 443
+  adds ssl/tls encryption to ftp
+  authentication with username/passwords and/or PKI
+  interactive terminal access
+  hides in web encryption
+
+wget
+  can be used to get web shit AND ftp
+  -r
+    recursive
+   wget -r https://12.34.56.789

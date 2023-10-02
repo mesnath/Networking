@@ -30,3 +30,12 @@ wget
   -r
     recursive
    wget -r https://12.34.56.789
+SCP
+  tcp 22
+  sym and assytricauthentication through sgn in or with ssh key
+  scp user@ip:/home/file
+  ssh port forward through scp
+  spc -p 111 student@localhost:secretshit.txt /home/student
+  spc -p 111 secretshit.txt student@localhost:home/student
+
+  

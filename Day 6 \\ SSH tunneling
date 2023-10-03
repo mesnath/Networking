@@ -1,0 +1,18 @@
+syntax:
+ssh -p <optional alt port> <user>@<pivot ip> -L <local bind port>:<tgt ip>:<tgt port>
+ssh -L <local bind port>:<tgt ip>:<tgt port> -p <alt port> <user>@<pivot ip>
+
+example:
+  ssh student@172.16.82.106 -L 1111:localhost:80 -NT
+    creates a local port (1111) on the local host that forwards to a target machine's port 80 
+  or
+  ssh -L 1111:localhost:80 student@172.16.82.106 -NT
+
+  ssh student@172.16.1.15 -L 1111:172.16.40.10:22 -NT
+  ssh student  @localhost -p 1111 -L 2222:172.16.82.106
+  firefox localhost:2222
+
+proxychains:
+Blue privae Host-1
+ssh student@172.16.82 9150
+procychains ssjsse

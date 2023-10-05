@@ -4,3 +4,31 @@ p0f
 process:
 check for malformed packets (statistics, protocol heirerarchy, protocol information, right click malformed and use as filter
 conversations
+
+data types
+  full packet capture data
+  session data
+    sflw
+      for switches; checks random packets
+    netflow
+      for networks; pulls all packet data and sends to on person to use/check
+  statistical data
+      all the shit your boss wants to know
+  packet string data
+  alert data
+      snort
+  log data 
+      snort
+
+data collection devices
+  sensors
+    in-line
+      placed inbetween source and destination of traffic so it can check
+    passive
+      mitm attack; not actually on the wire but you'teeeeee
+methods of data collection
+  taps
+  span
+  arp spoofing (MitM0
+    sending gratuitous replies until victim believes you belonw
+ 

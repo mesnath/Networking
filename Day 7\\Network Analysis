@@ -1,0 +1,5 @@
+p0f
+  fingerprinting tool
+  sig to figure out OS
+process:
+check for malformed packets (statistics, protocol heirerarchy, protocol information, right click malformed and use as filter

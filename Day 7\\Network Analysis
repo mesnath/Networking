@@ -32,3 +32,39 @@ methods of data collection
   arp spoofing (MitM0
     sending gratuitous replies until victim believes you belonw
  
+Anomoly detection
+  Indicator of Attack
+    proactive
+    a series of actions that are suspicious together
+    focus on intent
+    look for what must happen
+      code execution
+  IOC
+    reactive
+    forensic evidence
+      Provides Information that can change
+      Malware, IP addresses, exploits, signatures
+Indicators:
+    .exe/executable files
+    NOP sled
+    Repeated Letters
+    Well Known Signatures
+    Mismatched Protocols
+    Unusual traffic
+    Large amounts of traffic/ unusual times
+Potential indicators:
+    .exe/executable files
+    NOP sled
+    Repeated Letters
+    Well Known Signatures
+    Mismatched Protocols
+    Unusual traffic
+    Large amounts of traffic/ unusual times
+Potential Indicators of compromise
+  Unusual traffic outbound
+  Anomalous user login or account use
+  Size of responses for HTML
+  High number of requests for the same files
+  Using non-standard ports/ application-port mismatch
+  Writing changes to the registry/system files
+

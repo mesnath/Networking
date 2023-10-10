@@ -1,1 +1,10 @@
+whitelist 
+  default is implicit deny
+blacklist
+  default is implicit accept
+most everything isn't new 
+check fg for specific syntax and shit related to iptables
 
+sudo iptables -P INPUT DROP
+sudo iptables -P OUTPUT DROP
+sudo iptables

@@ -1,1 +1,2 @@
-
+out of band networks:
+	not routable but potentially has access to all devices on it that are needed to access
